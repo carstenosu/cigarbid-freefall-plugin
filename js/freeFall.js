@@ -36,7 +36,7 @@ if ( freeFall ) {
 	*/
 	var lowestPrice = isNaN(currentPrice.substring(1)) ? null : parseFloat(currentPrice.substring(1)).toFixed(2);
 	
-	var freefallDiv$ = $("div.lot_freefall");
+	var freefallDiv$ = $("div.lot_freefall0");
 	
 	var lowestPrice$ = $("<p>").addClass("lot_freefall_price_title").text("Lowest Price:");
 	
