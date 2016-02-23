@@ -21,7 +21,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["http://www.cigarbid.com/*"],
+      "matches": ["http://www.cigarbid.com/*", "http://cigarbid.com/*"],
       "js": ["js/jquery.js", "js/domChangePlugin.js", "js/freeFall.js", "js/options.js"]
     }
   ]
