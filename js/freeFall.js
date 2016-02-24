@@ -37,10 +37,10 @@ if ( freeFall ) {
 	var lowestPrice = isNaN(currentPrice.substring(1)) ? null : parseFloat(currentPrice.substring(1)).toFixed(2);
 	
 	var freefallDiv$ = $("div.lot_freefall");
+	$('#elem').css('cssText', 'width: 100px !important');
+	var lowestPrice$ = $("<p>").css('cssText', 'display: block !important').addClass("lot_freefall_price_title").text("Lowest Price:");
 	
-	var lowestPrice$ = $("<p>").addClass("lot_freefall_price_title").text("Lowest Price:");
-	
-	var lowestPriceValue$ = $("p.lot_freefall_price", freefallDiv$).clone();
+	var lowestPriceValue$ = $("p.lot_freefall_price", freefallDiv$).clone().css('cssText', 'display: block !important');
 	
 	if ( lowestPrice ) {		
 		lowestPriceValue$.text("$" + lowestPrice);
@@ -48,9 +48,9 @@ if ( freeFall ) {
 		lowestPriceValue$.text("");
 	}
 	
-	var lowPriceContainerDiv$ = $("<div>").append(lowestPrice$).append(lowestPriceValue$);
+	var lowPriceContainerDiv$ = $("<div>").css('cssText', 'display: block !important').append(lowestPrice$).append(lowestPriceValue$);
 	
-    freefallDiv$.prepend(lowestPriceValue$).prepend(lowestPrice$);
+    freefallDiv$.prepend(lowPriceContainerDiv$);
 
 	var newLowPriceSeen = false;
 	
