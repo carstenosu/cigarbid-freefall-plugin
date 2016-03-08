@@ -1,6 +1,6 @@
 {
   "name": "CigarBid Free Fall Plugin",
-  "version": "1.2",
+  "version": "1.2.1",
   "manifest_version": 2,
   "description": "Monitors the lowest price seen for a given free fall auction.", 
   "icons": { 
