@@ -38,9 +38,9 @@ if ( freeFall ) {
 	
 	var freefallDiv$ = $("div[class^='lot_freefall']");
 	$('#elem').css('cssText', 'width: 100px !important');
-	var lowestPrice$ = $("<p>").css('cssText', 'display: block !important').addClass("lot_freefall_price_title").text("Lowest Price:");
+	var lowestPrice$ = $("<p>").css('cssText', 'display: block !important; visibility: visible !important;').addClass("lot_freefall_price_title").text("Lowest Price:");
 	
-	var lowestPriceValue$ = $("p.lot_freefall_price", freefallDiv$).clone().css('cssText', 'display: block !important');
+	var lowestPriceValue$ = $("p.lot_freefall_price", freefallDiv$).clone().css('cssText', 'display: block !important; visibility: visible !important;');
 	
 	if ( lowestPrice ) {		
 		lowestPriceValue$.text("$" + lowestPrice);
@@ -48,7 +48,7 @@ if ( freeFall ) {
 		lowestPriceValue$.text("");
 	}
 	
-	var lowPriceContainerDiv$ = $("<div>").css('cssText', 'display: block !important').append(lowestPrice$).append(lowestPriceValue$);
+	var lowPriceContainerDiv$ = $("<div>").css('cssText', 'display: block !important; visibility: visible !important;').append(lowestPrice$).append(lowestPriceValue$);
 	
     freefallDiv$.prepend(lowPriceContainerDiv$);
 
